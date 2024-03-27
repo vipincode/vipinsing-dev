@@ -23,3 +23,9 @@ export const NewPasswordSchema = z.object({
     message: 'Minimum 6 characters required',
   }),
 })
+
+export const AboutMeSchema = z.object({
+  bio: z.string().min(6, {
+    message: 'Minimum 6 characters required',
+  }),
+})

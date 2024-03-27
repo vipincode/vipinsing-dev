@@ -11,8 +11,8 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { signup } from '@/actions/auth/sign-up'
 import { useState, useTransition } from 'react'
-import FormError from '../shared/form-error'
-import FormSuccess from '../shared/form-success'
+import FormError from '@/components/shared/form-error'
+import FormSuccess from '@/components/shared/form-success'
 
 export default function SignUp() {
   const [error, setError] = useState<string | undefined>('')

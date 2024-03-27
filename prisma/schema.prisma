@@ -29,6 +29,7 @@ model User {
   accounts              Account[]
   isTwoFactorEnables    Boolean                @default(false)
   TwoFactorConfirmation TwoFactorConfirmation?
+  profile               Profile[]
 }
 
 model Account {
@@ -83,4 +84,19 @@ model TwoFactorConfirmation {
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId])
+}
+
+model Profile {
+  id  String  @id @default(auto()) @map("_id") @db.ObjectId
+  bio String?
+
+  userId String   @db.ObjectId
+  user   User     @relation(fields: [userId], references: [id])
+  skills Skills[]
+}
+
+model Skills {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  profileId String  @db.ObjectId
+  profile   Profile @relation(fields: [profileId], references: [id])
 }

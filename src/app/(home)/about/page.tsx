@@ -9,7 +9,7 @@ export default async function AboutPage() {
     <section className="min-h-screen">
       <Banner
         className="bg-[url('/assets/jpg/banner-bg-pc.jpg')] bg-cover"
-        bannerHeading={`Hello, I am Vipin}`}
+        bannerHeading={`Hello, I am Vipin`}
         bannerDescription="Nice to meet you!"
         textAlign="left"
       />

@@ -1,11 +1,16 @@
 import { routes } from '@/config/routes'
-import { Grid2X2, Home, PanelsTopLeft, Settings } from 'lucide-react'
+import { Grid2X2, Home, PanelsTopLeft, Settings, User2 } from 'lucide-react'
 
 export const AdminNavLinks = [
   {
     label: 'Home',
     route: routes.admin.home,
     icon: <Home size={18} className="mr-2" />,
+  },
+  {
+    label: 'About',
+    route: routes.admin.about,
+    icon: <User2 size={18} className="mr-2" />,
   },
   {
     label: 'Project',

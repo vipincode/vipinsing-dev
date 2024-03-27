@@ -15,6 +15,7 @@ export const routes = {
   },
   admin: {
     home: '/dashboard/home',
+    about: '/dashboard/about',
     project: '/dashboard/projects',
     blog: '/dashboard/blogs',
     settings: '/dashboard/settings',
