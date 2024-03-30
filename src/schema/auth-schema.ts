@@ -25,6 +25,19 @@ export const NewPasswordSchema = z.object({
 })
 
 export const AboutMeSchema = z.object({
+  name: z.string().min(1, {
+    message: 'Minimum 1 letter required',
+  }),
+  image: z.string().optional(),
+  bannerTitle: z.string().min(1, {
+    message: 'Minimum 3 letter required',
+  }),
+  profileTitle: z.string().min(1, {
+    message: 'Minimum 3 letter required',
+  }),
+  designation: z.string().min(1, {
+    message: 'Minimum 3 letter required',
+  }),
   bio: z.string().min(6, {
     message: 'Minimum 6 characters required',
   }),
