@@ -12,7 +12,7 @@ export default function SidebarMenu() {
   return (
     <div className="col-span-2 ">
       <Card className="rounded-none sticky top-0">
-        <div className="flex flex-col justify-between min-h-screen">
+        <div className="flex flex-col justify-between h-[calc(100vh_-_2px)]">
           <div>
             <div className="text-center py-2 mt-2">
               <span className="text-xs uppercase tracking-wider text-gray-500 dark:text-primary">Dashboard</span>
