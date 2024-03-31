@@ -19,7 +19,6 @@ export default function AboutForm() {
   const [success, setSuccess] = useState<string | undefined>('')
   const [publicId, setPublicId] = useState('')
   const [isPending, startTransition] = useTransition()
-  const [tags, setTags] = useState<string[]>([])
 
   const form = useForm<z.infer<typeof AboutMeSchema>>({
     resolver: zodResolver(AboutMeSchema),

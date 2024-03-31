@@ -10,6 +10,9 @@ export default async function AboutPage() {
     where: {
       id: '66080b3b328490d7371d5812',
     },
+    include: {
+      skills: true,
+    },
   })
 
   return (
@@ -40,21 +43,17 @@ export default async function AboutPage() {
               <div className="mt-[50px]">
                 <h3 className="text-[16px] font-medium text-gray-500 dark:text-primary">Skills</h3>
                 <ul className="flex flex-wrap gap-2 mt-4">
-                  <li className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs">
-                    React
-                  </li>
-                  <li className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs">
-                    Next.js
-                  </li>
-                  <li className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs">
-                    JavaScript
-                  </li>
-                  <li className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs">
-                    CSS
-                  </li>
-                  <li className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs">
-                    SCSS
-                  </li>
+                  {data?.skills.length > 0 &&
+                    data?.skills.map((skill) => {
+                      return skill.name.map((item) => (
+                        <li
+                          className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs"
+                          key={item}
+                        >
+                          {item}
+                        </li>
+                      ))
+                    })}
                 </ul>
               </div>
               <div className="mt-10 mb-4">
