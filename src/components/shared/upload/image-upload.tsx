@@ -30,7 +30,16 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ publicId, setPublicId }) => {
         }}
       >
         {({ open }) => {
-          return <Button onClick={() => open()}>Upload</Button>
+          return (
+            <Button
+              onClick={(e: React.FormEvent) => {
+                e.preventDefault()
+                open()
+              }}
+            >
+              Upload
+            </Button>
+          )
         }}
       </CldUploadWidget>
     </div>

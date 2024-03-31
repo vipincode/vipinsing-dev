@@ -1,27 +1,54 @@
 'use client'
 
+import { createProjects } from '@/actions/projects/create-projects'
+import FormError from '@/components/shared/form-error'
+import ImageUpload from '@/components/shared/upload/image-upload'
+import { Button } from '@/components/ui/button'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { useForm } from 'react-hook-form'
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form'
 import { Textarea } from '@/components/ui/textarea'
-import SimpleMDE from 'react-simplemde-editor'
+import { ProjectsSchema } from '@/schema/auth-schema'
+import { zodResolver } from '@hookform/resolvers/zod'
 import 'easymde/dist/easymde.min.css'
-import { Button } from '../ui/button'
 import { Plus } from 'lucide-react'
-import ImageUpload from '../shared/upload/image-upload'
 import { useState, useTransition } from 'react'
+import { useForm } from 'react-hook-form'
+import SimpleMDE from 'react-simplemde-editor'
+import { z } from 'zod'
+import FormSuccess from '../shared/form-success'
 
 export default function ProjectForm() {
+  const [error, setError] = useState<string | undefined>('')
+  const [success, setSuccess] = useState<string | undefined>('')
   const [publicId, setPublicId] = useState('')
   const [isPending, startTransition] = useTransition()
 
-  const form = useForm()
-  const onSubmit = (values: any) => {
-    console.log('values:', values)
+  const form = useForm<z.infer<typeof ProjectsSchema>>({
+    resolver: zodResolver(ProjectsSchema),
+    defaultValues: {
+      name: '',
+      image: '',
+      url: '',
+      title: '',
+      shortDescription: '',
+      description: '',
+    },
+  })
+  const onSubmit = (values: z.infer<typeof ProjectsSchema>) => {
+    setError('')
+    setSuccess('')
+    startTransition(() => {
+      values.image = publicId
+      createProjects(values).then((data) => {
+        setError(data.error)
+        setSuccess(data.success)
+        form.reset()
+      })
+    })
   }
   return (
     <Form {...form}>
-      <form className="space-y-6">
+      <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
           name="name"
@@ -95,9 +122,10 @@ export default function ProjectForm() {
             </FormItem>
           )}
         />
-
-        <Button type="submit" onClick={form.handleSubmit(onSubmit)}>
-          <Plus /> Create Project
+        <FormError message={error} />
+        <FormSuccess message={success} />
+        <Button type="submit">
+          <Plus /> {isPending ? 'Creating...' : 'Create Project'}
         </Button>
       </form>
     </Form>

@@ -47,3 +47,22 @@ export const SkillsSchema = z.object({
   skills: z.array(z.string()).optional(),
   publicId: z.string().optional(),
 })
+
+export const ProjectsSchema = z.object({
+  name: z.string().min(1, {
+    message: 'Minimum 1 letter required',
+  }),
+  image: z.string().optional(),
+  url: z.string().min(1, {
+    message: 'Minimum 3 letter required',
+  }),
+  title: z.string().min(1, {
+    message: 'Minimum 3 letter required',
+  }),
+  shortDescription: z.string().min(6, {
+    message: 'Minimum 6 characters required',
+  }),
+  description: z.string().min(6, {
+    message: 'Minimum 6 characters required',
+  }),
+})
