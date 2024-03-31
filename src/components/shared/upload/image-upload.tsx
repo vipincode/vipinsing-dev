@@ -14,7 +14,7 @@ interface ImageUploadProps {
 const ImageUpload: React.FC<ImageUploadProps> = ({ publicId, setPublicId }) => {
   return (
     <div className="flex flex-col gap-6">
-      {publicId && <CldImage src={publicId} width={240} height={240} alt="Profile Image" />}
+      {publicId && <CldImage src={publicId} width={240} height={240} alt="data Image" />}
       <CldUploadWidget
         uploadPreset="tail1wzs"
         options={{

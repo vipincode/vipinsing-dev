@@ -4,14 +4,13 @@ import FormError from '@/components/shared/form-error'
 import FormSuccess from '@/components/shared/form-success'
 import InputTags from '@/components/shared/input-tags'
 import { Button } from '@/components/ui/button'
+import { routes } from '@/config/routes'
 import { SkillsSchema } from '@/schema/auth-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
-import Link from 'next/link'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import BackToButton from '../shared/back-to-button'
-import { routes } from '@/config/routes'
 
 export default function SkillsForm() {
   const [tags, setTags] = useState<string[]>([])

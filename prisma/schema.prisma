@@ -103,3 +103,18 @@ model Skills {
   profileId String  @db.ObjectId
   profile   Profile @relation(fields: [profileId], references: [id])
 }
+
+model Projects {
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  image            String?
+  url              String?
+  tag              String?
+  readTime         String?
+  title            String?
+  shortDescription String?
+  description      String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

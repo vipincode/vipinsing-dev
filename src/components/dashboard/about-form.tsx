@@ -15,6 +15,7 @@ import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import SimpleMDE from 'react-simplemde-editor'
 import { z } from 'zod'
+import { Plus } from 'lucide-react'
 
 export default function AboutForm() {
   const [error, setError] = useState<string | undefined>('')
@@ -52,7 +53,9 @@ export default function AboutForm() {
       <div className="flex justify-between">
         <h1 className="text-3xl text-primary dark:text-gray-200 mb-6">Add Bio</h1>
         <Button asChild>
-          <Link href={routes.admin.skills}>+ Add Skills</Link>
+          <Link href={routes.admin.skills}>
+            <Plus /> Add Skills
+          </Link>
         </Button>
       </div>
       <Form {...form}>
@@ -133,7 +136,9 @@ export default function AboutForm() {
           />
           <FormError message={error} />
           <FormSuccess message={success} />
-          <Button type="submit">{isPending ? 'Submitting...' : '+ Submit'}</Button>
+          <Button type="submit">
+            <Plus /> {isPending ? 'Submitting...' : 'Submit'}
+          </Button>
         </form>
       </Form>
     </>
