@@ -19,6 +19,7 @@ export default function AboutForm() {
   const [success, setSuccess] = useState<string | undefined>('')
   const [publicId, setPublicId] = useState('')
   const [isPending, startTransition] = useTransition()
+  const [tags, setTags] = useState<string[]>([])
 
   const form = useForm<z.infer<typeof AboutMeSchema>>({
     resolver: zodResolver(AboutMeSchema),
@@ -32,7 +33,6 @@ export default function AboutForm() {
     },
   })
 
-  console.log(publicId)
   const onSubmit = (values: z.infer<typeof AboutMeSchema>) => {
     setError('')
     setSuccess('')
@@ -110,12 +110,6 @@ export default function AboutForm() {
               Profile Image <small className="italic text-muted font-thin">(Optional)</small>
             </FormLabel>
             <ImageUpload publicId={publicId} setPublicId={setPublicId} />
-          </FormItem>
-          <FormItem>
-            <FormLabel>
-              Skills <small className="italic text-muted font-thin">(Optional)</small>
-            </FormLabel>
-            {/* component */}
           </FormItem>
         </div>
         <FormField

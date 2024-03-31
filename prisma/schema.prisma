@@ -97,7 +97,9 @@ model Profile {
 }
 
 model Skills {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+
   profileId String  @db.ObjectId
   profile   Profile @relation(fields: [profileId], references: [id])
 }

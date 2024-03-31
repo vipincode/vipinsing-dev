@@ -89,3 +89,13 @@
 html {
   font-family: var(--font-poppins);
 }
+
+.rti--container {
+  @apply !bg-transparent !border !border-muted;
+}
+.rti--input {
+  @apply !bg-transparent;
+}
+.rti--tag {
+  @apply !bg-primary !text-white !text-xs;
+}

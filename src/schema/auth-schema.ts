@@ -42,3 +42,8 @@ export const AboutMeSchema = z.object({
     message: 'Minimum 6 characters required',
   }),
 })
+
+export const SkillsSchema = z.object({
+  skills: z.array(z.string()).optional(),
+  publicId: z.string().optional(),
+})
