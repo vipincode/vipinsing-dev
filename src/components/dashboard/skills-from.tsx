@@ -6,9 +6,12 @@ import InputTags from '@/components/shared/input-tags'
 import { Button } from '@/components/ui/button'
 import { SkillsSchema } from '@/schema/auth-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
+import Link from 'next/link'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import BackToButton from '../shared/back-to-button'
+import { routes } from '@/config/routes'
 
 export default function SkillsForm() {
   const [tags, setTags] = useState<string[]>([])
@@ -44,6 +47,9 @@ export default function SkillsForm() {
 
   return (
     <div className="space-y-6">
+      <div>
+        <BackToButton className="pl-0" href={routes.admin.about} label="Back to about" />
+      </div>
       <div className="space-y-2">
         <label htmlFor="skill" className="text-lg">
           Add Skills
