@@ -6,9 +6,11 @@ import ImageUpload from '@/components/shared/upload/image-upload'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { routes } from '@/config/routes'
 import { AboutMeSchema } from '@/schema/auth-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import 'easymde/dist/easymde.min.css'
+import Link from 'next/link'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import SimpleMDE from 'react-simplemde-editor'
@@ -50,6 +52,9 @@ export default function AboutForm() {
       <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
         <div className="flex justify-between">
           <h1 className="text-3xl text-primary dark:text-gray-200 mb-6">Add Bio</h1>
+          <Button asChild>
+            <Link href={routes.admin.skills}>+ Add Skills</Link>
+          </Button>
         </div>
         <div className="grid grid-cols-2 gap-6">
           <FormField

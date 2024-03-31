@@ -16,6 +16,7 @@ export const routes = {
   admin: {
     home: '/dashboard/home',
     about: '/dashboard/about',
+    skills: '/dashboard/skills',
     project: '/dashboard/projects',
     blog: '/dashboard/blogs',
     settings: '/dashboard/settings',

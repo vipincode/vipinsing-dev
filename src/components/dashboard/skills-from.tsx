@@ -9,7 +9,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { FormItem, FormLabel } from '../ui/form'
 
 export default function SkillsForm() {
   const [tags, setTags] = useState<string[]>([])
