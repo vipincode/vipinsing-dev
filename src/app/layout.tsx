@@ -28,7 +28,7 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en" suppressHydrationWarning className={`${poppins.variable}`}>
         <body>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             <main>{children}</main>
             <Toaster />
           </ThemeProvider>

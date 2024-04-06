@@ -25,7 +25,7 @@ export default function UserLinks() {
       {Links.map((link) => (
         <li
           key={link.label}
-          className={`hover:text-primary text-sm ${link.route === pathname ? 'text-primary' : 'dark:text-white'}`}
+          className={`hover:text-primary text-sm ${link.route === pathname ? 'text-primary' : 'dark:text-blue-300'}`}
         >
           <Link href={link.route}>{link.label}</Link>
         </li>

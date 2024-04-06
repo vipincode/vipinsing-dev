@@ -22,7 +22,7 @@ export default async function UserMenu() {
         <MenubarTrigger className="p-0 data-[state=open]:bg-transparent focus:bg-transparent cursor-pointer">
           <Avatar>
             <AvatarImage src={user?.image as string} />
-            <AvatarFallback>{user?.name?.slice(0, 1)}</AvatarFallback>
+            <AvatarFallback className="bg-primary text-white">{user?.name?.slice(0, 1)}</AvatarFallback>
           </Avatar>
         </MenubarTrigger>
         <MenubarContent align="end">

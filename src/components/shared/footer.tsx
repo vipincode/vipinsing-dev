@@ -28,7 +28,8 @@ export default function Footer() {
       <div className="py-8">
         <div className="container flex justify-between items-center">
           <p className="text-xs dark:text-gray-300 tracking-wider font-light">
-            &copy; {new Date().getFullYear()} all right reserved.
+            <span className="text-primary text-base">&copy; </span>
+            {new Date().getFullYear()} all right reserved.
           </p>
           <SocialsIcon size={16} />
         </div>
