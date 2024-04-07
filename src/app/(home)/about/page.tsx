@@ -41,13 +41,13 @@ export default async function AboutPage() {
                 </div>
               </div>
               <div className="mt-[50px]">
-                <h3 className="text-[16px] font-medium text-gray-500 dark:text-primary">Skills</h3>
+                <h3 className="text-base font-bold text-gray-500 dark:text-primary">Skills</h3>
                 <ul className="flex flex-wrap gap-2 mt-4">
                   {data?.skills.length > 0 &&
                     data?.skills.map((skill) => {
                       return skill.name.map((item) => (
                         <li
-                          className="bg-gray-200 text-gray-500 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs"
+                          className="bg-primary text-gray-100 dark:bg-primary dark:text-white inline-block px-3 py-1 rounded-full text-xs"
                           key={item}
                         >
                           {item}
