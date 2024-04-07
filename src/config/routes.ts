@@ -2,7 +2,9 @@ export const routes = {
   homePage: '/',
   about: '/about',
   projects: '/projects',
+  projectId: (id: string) => `/projects/${id}`,
   blogs: '/blogs',
+  blogId: (id: string) => `/projects/${id}`,
   auth: {
     signIn: '/sign-in',
     signUp: '/sign-up',

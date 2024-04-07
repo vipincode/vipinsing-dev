@@ -9,11 +9,15 @@ import { CldImage } from 'next-cloudinary'
 export default function ProjectCard({ data }: { data: Projects }) {
   return (
     <Card>
-      <Link href={`${routes.projects}/${data.id}`} className="p-3 block">
+      <Link href={data.url!} target="_blank" className="p-3 block">
         {data.image && <CldImage src={data.image} width={400} height={400} alt={data.title!} />}
       </Link>
       <CardHeader className="pt-0">
-        <CardTitle>{data.title}</CardTitle>
+        <CardTitle>
+          <Link href={data.url!} target="_blank">
+            {data.title}
+          </Link>
+        </CardTitle>
         <CardDescription>{data.tag}</CardDescription>
       </CardHeader>
       <CardContent>
