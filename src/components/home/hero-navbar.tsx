@@ -19,7 +19,7 @@ export const HeroNavbar = async () => {
           </li>
           <UserLinks />
           {!user && (
-            <li className="dark:text-blue-300 hover:text-primary text-sm">
+            <li className="dark:text-slate-500 hover:text-primary text-sm">
               <Link href={routes.auth.signIn}>Sign In</Link>
             </li>
           )}

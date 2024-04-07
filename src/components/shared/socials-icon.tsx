@@ -11,7 +11,7 @@ interface Props {
 
 export default function SocialsIcon({ size, className }: Props) {
   return (
-    <div className={cn('flex items-center justify-center gap-6 text-primary', className)}>
+    <div className={cn('flex items-center justify-center gap-6 text-primary dark:text-slate-500', className)}>
       <Link href="#">
         <SlSocialLinkedin size={size} />
       </Link>

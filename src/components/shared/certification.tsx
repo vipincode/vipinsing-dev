@@ -46,7 +46,7 @@ export default function Certification() {
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center items-center"
         >
-          <Image width={100} height={50} src={UdemyLearning} alt="" />
+          <Image className="dark:filter dark:invert-[30%]" width={100} height={50} src={UdemyLearning} alt="" />
         </motion.div>
       </motion.div>
     </section>

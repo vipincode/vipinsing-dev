@@ -27,10 +27,10 @@ export default function Skills() {
         <p>Prisma, MongoDb and SQL.</p>
       </FadeIn>
       <FadeIn>
-        <p>Git, GitGub and GitHub actions.</p>
+        <p>Git and GitHub.</p>
       </FadeIn>
       <FadeIn>
-        <p>Adobe Photoshop, Illustrator and Figma.</p>
+        <p>PSD to HTML | React, Figma to HTML | React.</p>
       </FadeIn>
     </div>
   )

@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="grid grid-cols-12 container items-center">
         <div className="col-span-7">
           <motion.div initial={{ opacity: 0, x: -120 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-[16px] font-normal uppercase text-primary/75 dark:text-gray-300 mb-4 tracking-wider">
+            <h1 className="text-[16px] font-normal uppercase text-primary/75 dark:text-slate-500 mb-4 tracking-wider">
               Frontend Developer & Web designer
             </h1>
           </motion.div>

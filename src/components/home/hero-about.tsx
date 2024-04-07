@@ -19,7 +19,7 @@ export default function HeroAbout() {
             <source src="/video/about-video.mp4" type="video/mp4" />
           </video>
         </motion.div>
-        <div className="relative z-10 min-h-[100svh]">
+        <div className="relative z-10 min-h-[100svh] flex items-center justify-center">
           <motion.article
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -31,9 +31,9 @@ export default function HeroAbout() {
             animate="hidden"
             className="h-full w-full flex items-center container py-[60px] px-[50px]"
           >
-            <div className="max-w-[68%]">
+            <div className="w-full max-w-[80%] mx-auto text-center">
               <h2 className="text-[60px] leading-[74px] font-semibold text-white mb-8">
-                I create beautiful websites for small businesses and start-ups to help them reach bigger audiences
+                I create beautiful websites for small businesses and start-ups.
               </h2>
               <p className="text-[21px] font-light leading-[42px] my-3 text-white">
                 With four years of experience in UI design and website development, I specialize in creating visually

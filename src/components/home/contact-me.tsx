@@ -16,7 +16,7 @@ export default function ContactMe() {
             <div className="pt-6">
               <h2 className="text-[38px] font-bold leading-[52px] text-primary">Have a question?</h2>
               <h2 className="text-[28px] font-bold leading-[52px] text-purple-600">Schedule a online meeting.</h2>
-              <p className="text-gray-500 dark:text-gray-300">Let&apos;s create something amazing together!</p>
+              <p className="text-gray-500 dark:text-slate-500">Let&apos;s create something amazing together!</p>
             </div>
           </div>
           <Form {...form}>
@@ -27,7 +27,7 @@ export default function ContactMe() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary dark:text-gray-300">Name</FormLabel>
+                      <FormLabel className="text-primary dark:text-slate-500">Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Your name" {...field} type="text" />
                       </FormControl>
@@ -40,7 +40,7 @@ export default function ContactMe() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary dark:text-gray-300">Email</FormLabel>
+                      <FormLabel className="text-primary dark:text-slate-500">Email</FormLabel>
                       <FormControl>
                         <Input placeholder="Your email" {...field} type="email" />
                       </FormControl>
@@ -53,7 +53,7 @@ export default function ContactMe() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary dark:text-gray-300">Your Message</FormLabel>
+                      <FormLabel className="text-primary dark:text-slate-500">Your Message</FormLabel>
                       <FormControl>
                         <Textarea placeholder="Message" {...field} />
                       </FormControl>
