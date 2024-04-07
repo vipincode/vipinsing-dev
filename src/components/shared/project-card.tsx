@@ -1,10 +1,10 @@
 'use client'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { Projects } from '@prisma/client'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { routes } from '@/config/routes'
+import { Projects } from '@prisma/client'
 import { CldImage } from 'next-cloudinary'
+import Link from 'next/link'
 
 export default function ProjectCard({ data }: { data: Projects }) {
   return (
