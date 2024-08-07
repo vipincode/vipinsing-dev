@@ -1,13 +1,29 @@
-import { type LucideIcon, Check, Heart } from 'lucide-react';
+import {
+  type LucideIcon,
+  Check,
+  Heart,
+  Rotate3D,
+  Home,
+  User,
+  Layers,
+  ClipboardPenLine,
+  MessageSquareText,
+} from 'lucide-react';
 import { ComponentProps } from 'react';
 
 export type IconProps = ComponentProps<LucideIcon> & {
-  type: 'check' | 'heart';
+  type: 'check' | 'heart' | 'logo' | 'home' | 'user' | 'layers' | 'writing' | 'chat';
 };
 
 const iconComponents: Record<IconProps['type'], LucideIcon> = {
   check: Check,
   heart: Heart,
+  logo: Rotate3D,
+  home: Home,
+  user: User,
+  layers: Layers,
+  writing: ClipboardPenLine,
+  chat: MessageSquareText,
 };
 
 export const Icon = ({ type, ...props }: IconProps) => {
