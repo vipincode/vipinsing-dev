@@ -17,7 +17,12 @@ const config: Config = {
       white,
       body,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)'],
+        bricolage: ['var(--font-bricolage-grotesque)'],
+      },
+    },
   },
   plugins: [],
 };
