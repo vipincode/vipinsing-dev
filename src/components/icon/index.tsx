@@ -8,11 +8,14 @@ import {
   Layers,
   ClipboardPenLine,
   MessageSquareText,
+  Moon,
+  SunMedium,
+  TrendingUp,
 } from 'lucide-react';
 import { ComponentProps } from 'react';
 
 export type IconProps = ComponentProps<LucideIcon> & {
-  type: 'check' | 'heart' | 'logo' | 'home' | 'user' | 'layers' | 'writing' | 'chat';
+  type: 'check' | 'heart' | 'logo' | 'home' | 'user' | 'layers' | 'writing' | 'chat' | 'moon' | 'sun' | 'trendingUp';
 };
 
 const iconComponents: Record<IconProps['type'], LucideIcon> = {
@@ -24,6 +27,9 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
   layers: Layers,
   writing: ClipboardPenLine,
   chat: MessageSquareText,
+  moon: Moon,
+  sun: SunMedium,
+  trendingUp: TrendingUp,
 };
 
 export const Icon = ({ type, ...props }: IconProps) => {
