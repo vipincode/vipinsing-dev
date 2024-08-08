@@ -15,7 +15,7 @@ const NavLinks = () => {
           href={menu.href}
           className={twMerge(
             'flex gap-2 items-center px-4 py-2 rounded hover:bg-primary-50 dark:hover:bg-gray-950 dark:text-gray-500 dark:hover:text-white dark:transition-all dark:ease-in duration-75',
-            path === menu.href && 'bg-primary-50 dark:bg-gray-950',
+            path === menu.href && 'bg-primary-50 dark:bg-gray-950 dark:text-white',
           )}
         >
           <Icon type={menu.icon} size={16} />

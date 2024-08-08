@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Poppins, Bricolage_Grotesque } from 'next/font/google';
 import '@/styles/globals.css';
 import { Navbar } from '@/components/navbar';
+import Footer from '@/components/footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -34,7 +35,7 @@ export default function RootLayout({
             <Navbar />
           </header>
           <main>{children}</main>
-          <footer>Footer</footer>
+          <Footer />
         </div>
       </body>
     </html>

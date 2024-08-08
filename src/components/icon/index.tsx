@@ -11,11 +11,28 @@ import {
   Moon,
   SunMedium,
   TrendingUp,
+  Facebook,
+  Linkedin,
+  Youtube,
 } from 'lucide-react';
 import { ComponentProps } from 'react';
 
 export type IconProps = ComponentProps<LucideIcon> & {
-  type: 'check' | 'heart' | 'logo' | 'home' | 'user' | 'layers' | 'writing' | 'chat' | 'moon' | 'sun' | 'trendingUp';
+  type:
+    | 'check'
+    | 'heart'
+    | 'logo'
+    | 'home'
+    | 'user'
+    | 'layers'
+    | 'writing'
+    | 'chat'
+    | 'moon'
+    | 'sun'
+    | 'trendingUp'
+    | 'facebook'
+    | 'linkedin'
+    | 'youtube';
 };
 
 const iconComponents: Record<IconProps['type'], LucideIcon> = {
@@ -30,6 +47,9 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
   moon: Moon,
   sun: SunMedium,
   trendingUp: TrendingUp,
+  facebook: Facebook,
+  linkedin: Linkedin,
+  youtube: Youtube,
 };
 
 export const Icon = ({ type, ...props }: IconProps) => {
