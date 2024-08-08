@@ -4,5 +4,5 @@
 
 body {
   font-family: var(--font-poppins);
-  @apply bg-body dark:bg-black dark:text-white;
+  @apply bg-body dark:bg-blue dark:text-gray-200;
 }

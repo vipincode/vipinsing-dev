@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-mode="light">
+    <html lang="en" data-mode="dark" suppressHydrationWarning>
       <body className={`${poppins.variable} ${bricolage_grotesque.variable}`}>
         <div className="container mx-auto px-4 py-6 space-y-8">
           <header>

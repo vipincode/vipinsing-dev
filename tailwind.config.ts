@@ -13,7 +13,6 @@ const config: Config = {
     colors: {
       ...colors,
       black,
-
       transparent,
       white,
       body,
@@ -31,6 +30,9 @@ const config: Config = {
         sm: 'rgba(0, 0, 0, 0.02) 0px 2px 30px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px',
         md: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
         lg: '0px 3px 8px rgba(0, 0, 0, 0.24)',
+      },
+      backgroundImage: {
+        blue: 'linear-gradient(to right, #0f0c29, #302b63, #24243e)',
       },
     },
   },
