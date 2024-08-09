@@ -6,3 +6,17 @@ body {
   font-family: var(--font-poppins);
   @apply bg-body dark:bg-blue dark:text-gray-200;
 }
+
+@layer components {
+  /* @MAKING TEXT OUTLINE */
+  .light .text-outline {
+    color: #fff;
+    -webkit-text-fill-color: (theme(colors.white));
+    -webkit-text-stroke: 1px theme(colors.primary.500);
+  }
+  .dark .text-outline {
+    color: #000;
+    -webkit-text-fill-color: (theme(colors.black));
+    -webkit-text-stroke: 0.35px theme(colors.white);
+  }
+}
