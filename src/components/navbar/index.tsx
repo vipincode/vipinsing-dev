@@ -3,7 +3,7 @@ import { Box } from '@/components/box';
 import { Icon } from '@/components/icon';
 import { routes } from '@/config/routes';
 import NavLinks from '@/components/navbar/nav-links';
-import ThemeChanger from '@/config/theme/theme-changer';
+import ThemeToggle from '@/config/theme/theme-toggle';
 
 export const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ export const Navbar = () => {
           <NavLinks />
         </div>
         <div className="flex items-center gap-10 dark:text-gray-500">
-          <ThemeChanger />
+          <ThemeToggle />
           <button className="flex gap-1 items-center ">
             Let&apos;s Talk <Icon type="trendingUp" />
           </button>

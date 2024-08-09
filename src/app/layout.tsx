@@ -3,6 +3,7 @@ import { Poppins, Bricolage_Grotesque } from 'next/font/google';
 import '@/styles/globals.css';
 import { Navbar } from '@/components/navbar';
 import Footer from '@/components/footer';
+import { ThemeProvider } from 'next-themes';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,15 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-mode="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable} ${bricolage_grotesque.variable}`}>
-        <div className="container mx-auto px-4 py-6 space-y-8">
-          <header>
-            <Navbar />
-          </header>
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <div className="container mx-auto px-4 py-6 space-y-8">
+            <header>
+              <Navbar />
+            </header>
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

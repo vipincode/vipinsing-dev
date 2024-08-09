@@ -13,7 +13,7 @@ export default function Home() {
         <Box>Recent Projects</Box>
       </div>
       <div className="grid grid-cols-12 gap-6">
-        <Box className="col-span-8">My Expert Area </Box>
+        <Box className="col-span-8">Storybook design </Box>
         <Box className="col-span-4">Let&apos;s👋 Work Together</Box>
       </div>
     </div>
