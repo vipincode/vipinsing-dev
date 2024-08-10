@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 
-export const h2Variants = cva(['text-gray-950 dark:text-gray-100 font-bricolage font-semibold'], {
+export const h2Variants = cva(['text-gray-950 dark:text-gray-100 font-bricolage font-semibold pb-3 pt-1'], {
   variants: {
     variant: {
       xs: ['text-base', 'leading-5'],

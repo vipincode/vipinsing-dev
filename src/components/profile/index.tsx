@@ -11,7 +11,7 @@ const Profile = () => {
       <div className=" ">
         <Image src={profileImage} width={400} height={400} alt="" className="h-[300px] rounded-md object-cover" />
       </div>
-      <article className="space-y-3">
+      <article>
         <H2>Vipin Singh👋</H2>
         <Text>
           A Passionate <span className="text-gray-950 dark:text-gray-400">Front End Developer</span> 🖥️ &{' '}

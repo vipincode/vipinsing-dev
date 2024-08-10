@@ -19,4 +19,20 @@ body {
     -webkit-text-fill-color: (theme(colors.black));
     -webkit-text-stroke: 0.35px theme(colors.white);
   }
+  .h-scroll {
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: theme(colors.gray.950);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: theme(colors.gray.800);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: theme(colors.gray.900);
+    }
+  }
 }
