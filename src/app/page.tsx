@@ -4,6 +4,8 @@ import Profile from '@/components/profile';
 import { H2 } from '@/components/typography/heading';
 import { routes } from '@/config/routes';
 import MyExpertArea from '@/module/home/my-expert-area';
+import RecentProject from '@/module/home/recent-project';
+import StorybookDesign from '@/module/home/storybook-design';
 import WorkExperience from '@/module/home/work-experience';
 import Link from 'next/link';
 
@@ -16,16 +18,10 @@ export default function Home() {
           <WorkExperience />
           <MyExpertArea />
         </div>
-        <div>
-          <Box className="h-full">
-            <H2>Recent Projects</H2>
-          </Box>
-        </div>
+        <RecentProject />
       </div>
       <div className="grid grid-cols-12 gap-6">
-        <Box className="col-span-8">
-          <H2>Storybook design</H2>
-        </Box>
+        <StorybookDesign />
         <Box className="col-span-4 min-h-[250px]">
           <span className="bg-primary-10 my-3 inline-block rounded px-3 py-2 text-primary-400 dark:bg-gray-950 dark:text-gray-300">
             Available for Hire

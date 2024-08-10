@@ -14,6 +14,8 @@ import {
   Facebook,
   Linkedin,
   Youtube,
+  MoveRight,
+  ArrowRight,
 } from 'lucide-react';
 import { ComponentProps } from 'react';
 
@@ -32,7 +34,9 @@ export type IconProps = ComponentProps<LucideIcon> & {
     | 'trendingUp'
     | 'facebook'
     | 'linkedin'
-    | 'youtube';
+    | 'youtube'
+    | 'arrowRight'
+    | 'moveRight';
 };
 
 const iconComponents: Record<IconProps['type'], LucideIcon> = {
@@ -50,6 +54,8 @@ const iconComponents: Record<IconProps['type'], LucideIcon> = {
   facebook: Facebook,
   linkedin: Linkedin,
   youtube: Youtube,
+  moveRight: MoveRight,
+  arrowRight: ArrowRight,
 };
 
 export const Icon = ({ type, ...props }: IconProps) => {
