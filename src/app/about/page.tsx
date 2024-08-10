@@ -1,5 +1,5 @@
-import { Box } from '@/components/box';
+import AboutMe from '@/module/about';
 
 export default function AboutPage() {
-  return <Box>About Page</Box>;
+  return <AboutMe />;
 }

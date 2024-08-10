@@ -1,5 +1,5 @@
-import { Box } from '@/components/box';
+import Blog from '@/module/blog/blog';
 
 export default function BlogPage() {
-  return <Box>Blog Page</Box>;
+  return <Blog />;
 }

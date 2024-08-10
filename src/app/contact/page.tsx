@@ -1,5 +1,5 @@
-import { Box } from '@/components/box';
+import Contact from '@/module/contact/contact';
 
 export default function ContactPage() {
-  return <Box>Contact Page</Box>;
+  return <Contact />;
 }
