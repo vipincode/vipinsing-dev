@@ -3,8 +3,6 @@ import { type TextOutlineVariants, variants } from '@/components/typography/text
 
 type TextOutlineProps = ComponentProps<'span'> & TextOutlineVariants;
 
-const TextOutline = ({ variant, className, ...props }: TextOutlineProps) => {
+export const TextOutline = ({ variant, className, ...props }: TextOutlineProps) => {
   return <span className={variants({ variant, className })} {...props} />;
 };
-
-export default TextOutline;

@@ -1,28 +1,26 @@
-import Link from 'next/link';
 import { Box } from '@/components/box';
 import { Icon } from '@/components/icon';
-import { routes } from '@/config/routes';
+import Logo from '@/components/logo';
 import NavLinks from '@/components/navbar/nav-links';
+import { routes } from '@/config/routes';
 import ThemeToggle from '@/config/theme/theme-toggle';
+import Link from 'next/link';
 
 export const Navbar = () => {
   return (
     <Box>
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <Link href={routes.home} className="flex items-center gap-1">
-          <Icon type="logo" size={34} />
-          <div className="text-3xl font-bricolage font-bold tracking-tighter">
-            Vipin<span className="text-primary-600">Folio</span>
-          </div>
+          <Logo />
         </Link>
         <div className="flex items-center gap-1 font-bricolage">
           <NavLinks />
         </div>
-        <div className="flex items-center gap-10 dark:text-gray-500">
+        <div className="flex items-center gap-10 font-semibold text-gray-600 dark:text-gray-500">
           <ThemeToggle />
-          <button className="flex gap-1 items-center ">
+          <Link href={routes.contact} className="flex items-center gap-1">
             Let&apos;s Talk <Icon type="trendingUp" />
-          </button>
+          </Link>
         </div>
       </div>
     </Box>

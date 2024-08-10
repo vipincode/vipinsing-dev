@@ -1,15 +1,16 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 
-export const variants = cva(['text-outline '], {
+export const variants = cva(['text-outline font-poppins'], {
   variants: {
     variant: {
-      'text-md': ['text-6xl font-bold leading-[72px]'],
-      'text-lg': ['text-8xl font-bold leading-[110px]'],
-      'text-xl': ['text-9xl font-bold leading-[152px]'],
+      sm: ['text-2xl font-bold leading-[30px]'],
+      md: ['text-3xl font-bold leading-[36px]'],
+      lg: ['text-8xl font-bold leading-[110px]'],
+      xl: ['text-9xl font-bold leading-[152px]'],
     },
   },
   defaultVariants: {
-    variant: 'text-md',
+    variant: 'md',
   },
 });
 

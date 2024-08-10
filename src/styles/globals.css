@@ -4,11 +4,11 @@
 
 body {
   font-family: var(--font-poppins);
-  @apply bg-body dark:bg-blue dark:text-gray-200;
+  @apply bg-body text-gray-600 dark:bg-blue dark:text-gray-200;
 }
 
 @layer components {
-  /* @MAKING TEXT OUTLINE */
+  /* TODO: Writing to make text outlined */
   .light .text-outline {
     color: #fff;
     -webkit-text-fill-color: (theme(colors.white));
