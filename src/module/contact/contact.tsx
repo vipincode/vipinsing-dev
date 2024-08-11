@@ -1,10 +1,10 @@
 import { Box } from '@/components/box';
-import { H2 } from '@/components/typography';
+import { TextOutline } from '@/components/typography';
 
 const Contact = () => {
   return (
-    <Box>
-      <H2>Contact</H2>
+    <Box className="flex min-h-[70vh] items-center justify-center">
+      <TextOutline variant="lg">Coming Soon...</TextOutline>
     </Box>
   );
 };
