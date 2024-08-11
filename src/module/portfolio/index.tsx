@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <>
       <H2>All Portfolio</H2>
-      <div className="mt-6 grid grid-cols-3 gap-6">
+      <div className="mt-6 grid grid-cols-3 gap-4">
         {portfolioData.map((data) => (
           <PortfolioCard key={data.id} data={data} />
         ))}
