@@ -1,18 +1,14 @@
-import { H2, H3 } from '@/components/typography';
+import { H2 } from '@/components/typography';
 import { portfolioData } from '@/config/data';
-import Link from 'next/link';
+import PortfolioCard from '@/components/portfolio-card';
 
 const Portfolio = () => {
   return (
     <>
       <H2>All Portfolio</H2>
-      <div className="mt-6 grid grid-cols-4 gap-6">
+      <div className="mt-6 grid grid-cols-3 gap-6">
         {portfolioData.map((data) => (
-          <div key={data.id}>
-            <Link href={data.projectUrl} target="_blank">
-              <H3>{data.projectName}</H3>
-            </Link>
-          </div>
+          <PortfolioCard key={data.id} data={data} />
         ))}
       </div>
     </>

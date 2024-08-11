@@ -4,7 +4,6 @@ import { H2 } from '@/components/typography';
 import { routes } from '@/config/routes';
 import Image from 'next/image';
 import Link from 'next/link';
-import StorybookDesignOne from '@/assets/projects/storybook-1.png';
 
 const StorybookDesign = () => {
   return (
@@ -18,7 +17,13 @@ const StorybookDesign = () => {
       </div>
       <div className="mt-2">
         <Link href="https://storybook-ui-first-step.vercel.app/?path=/docs/tokens-colors--docs" target="_blank">
-          <Image className="rounded-md" src={StorybookDesignOne} width={300} height={300} alt="Storybook design" />
+          <Image
+            className="rounded-md"
+            src="/projects/storybook-1.png"
+            width={300}
+            height={300}
+            alt="Storybook design"
+          />
         </Link>
       </div>
     </Box>

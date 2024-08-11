@@ -1,5 +1,3 @@
-import AuthApp from '@/assets/projects/auth.png';
-import Saloon from '@/assets/projects/saloon.png';
 import { Box } from '@/components/box';
 import { Icon } from '@/components/icon';
 import { H2 } from '@/components/typography';
@@ -19,10 +17,10 @@ const RecentProject = () => {
       </div>
       <div className="mt-6 space-y-8">
         <Link className="block" href="https://nextauth-theta-eight.vercel.app" target="_blank">
-          <Image className="rounded-md" src={AuthApp} width={400} height={400} alt="Next Auth app" />
+          <Image className="rounded-md" src="/projects/auth.png" width={400} height={400} alt="Next Auth app" />
         </Link>
         <Link className="block" href="https://ap-square.netlify.app" target="_blank">
-          <Image className="rounded-md" src={Saloon} width={400} height={400} alt="Next Auth app" />
+          <Image className="rounded-md" src="/projects/saloon.png" width={400} height={400} alt="Next Auth app" />
         </Link>
       </div>
     </Box>
