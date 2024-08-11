@@ -37,7 +37,7 @@ const AboutMe = () => {
                   <H3>Byldd | Front-End Developer</H3>
                   <span className="text-sm font-medium italic">2022 - Present</span>
                 </div>
-                <Text variant="sm">
+                <Text>
                   At Byldd, I have been instrumental in building and maintaining high-quality web applications. My role
                   involves working closely with cross-functional teams to develop responsive and user-friendly
                   interfaces using React and Next.js. I also focus on state management using Redux Toolkit, ensuring
@@ -50,7 +50,7 @@ const AboutMe = () => {
                   <H3>Diptimate Consultant | HTML/CSS Developer</H3>
                   <span className="text-sm font-medium italic">2020 - 2021</span>
                 </div>
-                <Text variant="sm">
+                <Text>
                   At Diptimate Consultant, I specialized in crafting responsive websites and web applications. My work
                   focused on writing clean, maintainable code using HTML and CSS, while also collaborating with
                   designers to bring their visions to life. I played a key role in enhancing the visual appeal and
@@ -62,7 +62,7 @@ const AboutMe = () => {
                   <H3>Ebslon Infotech | HTML/CSS Developer</H3>
                   <span className="text-sm font-medium italic">2019 - 2020</span>
                 </div>
-                <Text variant="sm">
+                <Text>
                   During my time at Ebslon Infotech, I was responsible for developing and optimizing web interfaces. My
                   expertise in HTML and CSS allowed me to create pixel-perfect designs that met client specifications. I
                   also worked on improving the performance and accessibility of web pages, ensuring that they were both
@@ -74,7 +74,7 @@ const AboutMe = () => {
                   <H3>Sunsoft Infotech | HTML/CSS Developer</H3>
                   <span className="text-sm font-medium italic">2016 - 2019</span>
                 </div>
-                <Text className="font-normal">
+                <Text>
                   At Sunsoft Infotech, I began my career as an HTML/CSS Developer. I contributed to various projects by
                   converting design mockups into fully functional and responsive web pages. My work involved
                   collaborating with back-end developers to integrate front-end components, ensuring a seamless user
