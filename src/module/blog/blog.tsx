@@ -1,10 +1,10 @@
 import { Box } from '@/components/box';
-import { H2 } from '@/components/typography';
+import { TextOutline } from '@/components/typography';
 
 const Blog = () => {
   return (
-    <Box>
-      <H2>Blog</H2>
+    <Box className="flex min-h-[70vh] items-center justify-center">
+      <TextOutline variant="lg">Coming Soon...</TextOutline>
     </Box>
   );
 };

@@ -25,13 +25,13 @@ export const NavMenus: NavMenu[] = [
     href: routes.portfolio,
   },
   {
-    label: 'Blog',
-    icon: 'writing',
-    href: routes.blog,
-  },
-  {
     label: 'Contact',
     icon: 'chat',
     href: routes.contact,
+  },
+  {
+    label: 'Blog',
+    icon: 'writing',
+    href: routes.blog,
   },
 ];
