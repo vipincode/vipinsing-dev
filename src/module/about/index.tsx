@@ -35,7 +35,7 @@ const AboutMe = () => {
               <article>
                 <div>
                   <H3>Byldd | Front-End Developer</H3>
-                  <span className="text-sm font-medium italic">2021 - Present</span>
+                  <span className="text-sm font-medium italic">2022 - Present</span>
                 </div>
                 <Text variant="sm">
                   At Byldd, I have been instrumental in building and maintaining high-quality web applications. My role
