@@ -1,4 +1,3 @@
-import { H3, Text } from '@/components/typography';
 import Image from 'next/image';
 import Link from 'next/link';
 
