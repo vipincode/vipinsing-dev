@@ -4,11 +4,11 @@ import { H2, H3, Text } from '@/components/typography';
 
 const AboutMe = () => {
   return (
-    <div className="grid grid-cols-12 gap-6">
-      <div className="col-span-4">
+    <div className="space-y-4 md:grid md:grid-cols-12 md:gap-6 md:space-y-0">
+      <div className="md:col-span-5 lg:col-span-4">
         <Profile />
       </div>
-      <div className="col-span-8">
+      <div className="md:col-span-7 lg:col-span-8">
         <Box className="min-h-[76vh]">
           <H2>About me 👋</H2>
           <article className="space-y-3">

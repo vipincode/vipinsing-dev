@@ -13,14 +13,19 @@ export const Navbar = () => {
         <Link href={routes.home} className="flex items-center gap-1">
           <Logo />
         </Link>
-        <div className="flex items-center gap-1 font-bricolage">
+        <div className="hidden items-center gap-1 font-bricolage lg:flex">
           <NavLinks />
         </div>
-        <div className="flex items-center gap-10 font-semibold text-gray-600 dark:text-gray-500">
+        <div className="hidden items-center gap-10 font-semibold text-gray-600 dark:text-gray-500 lg:flex">
           <ThemeToggle />
           <Link href={routes.contact} className="flex items-center gap-1">
             Let&apos;s Talk <Icon type="trendingUp" />
           </Link>
+        </div>
+        <div className="lg:hidden">
+          <button>
+            <Icon type="alignRight" />
+          </button>
         </div>
       </div>
     </Box>

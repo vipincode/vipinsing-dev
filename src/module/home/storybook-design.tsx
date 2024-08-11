@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const StorybookDesign = () => {
   return (
-    <Box className="col-span-8">
+    <Box className="md:col-span-6 xl:col-span-8">
       <div className="flex items-center justify-between">
         <H2>Storybook ui design</H2>
         <Link href={routes.portfolio} className="flex items-center gap-1 text-sm text-primary-500">

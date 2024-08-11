@@ -12,7 +12,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="space-y-6">
-      <div className="grid-rows-26 grid grid-cols-3 gap-6">
+      <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 xl:grid-cols-3">
         <Profile />
         <div className="flex flex-col gap-6">
           <WorkExperience />
@@ -20,9 +20,9 @@ export default function Home() {
         </div>
         <RecentProject />
       </div>
-      <div className="grid grid-cols-12 gap-6">
+      <div className="space-y-4 md:grid md:grid-cols-12 md:gap-6 md:space-y-0">
         <StorybookDesign />
-        <Box className="col-span-4 min-h-[250px]">
+        <Box className="min-h-[250px] md:col-span-6 xl:col-span-4">
           <span className="bg-primary-10 my-3 inline-block rounded px-3 py-2 text-primary-400 dark:bg-gray-950 dark:text-gray-300">
             Available for Hire
           </span>
