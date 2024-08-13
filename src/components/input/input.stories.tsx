@@ -4,6 +4,10 @@ import { Input } from '@/components/input';
 const meta: Meta<typeof Input> = {
   title: 'Components/input',
   component: Input,
+  args: {
+    variant: 'DEFAULT',
+    placeholder: 'Input placeholder',
+  },
   argTypes: {
     variant: {
       control: 'select',
@@ -18,42 +22,35 @@ export type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
-    placeholder: 'Default button',
+    variant: 'DEFAULT',
   },
 };
 
 export const Outline: Story = {
   args: {
-    placeholder: 'Outline button',
     variant: 'outline',
   },
 };
 
 export const Compact: Story = {
   args: {
-    placeholder: 'Extra small button',
     variant: 'compact',
   },
 };
 
 export const Dense: Story = {
   args: {
-    placeholder: 'Small button',
     variant: 'dense',
   },
 };
 
 export const Solo: Story = {
   args: {
-    placeholder: 'Medium button',
     variant: 'solo',
   },
 };
 
 export const Dark: Story = {
-  args: {
-    placeholder: 'Dark theme text',
-  },
   parameters: {
     themes: {
       themeOverride: 'dark',
@@ -63,7 +60,6 @@ export const Dark: Story = {
 
 export const Mobile: Story = {
   args: {
-    placeholder: 'Mobile input',
     variant: 'compact',
   },
   parameters: {

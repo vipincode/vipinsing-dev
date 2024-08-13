@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { colors } from './color.ts';
+
+{/* This put the file global level see on/off */}
+
+<Meta title="tokens/Colors" />
+
+<ColorPalette>
+  {Object.entries(colors).map(([name, value]) => (
+    <ColorItem key={name} title={name} colors={value} />
+  ))}
+  {/* <ColorItem title="Blue" subtitle="Our brand color is blue" colors={{ Primary: '#00F' }} /> */}
+</ColorPalette>
