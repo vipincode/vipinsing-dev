@@ -28,7 +28,7 @@ const Contact = () => {
   });
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/api';
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || '';
 
     setIsPending(true);
     try {
