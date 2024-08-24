@@ -28,9 +28,11 @@ const Contact = () => {
   });
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/api';
+
     setIsPending(true);
     try {
-      const response = await axios.post('/api/contact', data);
+      const response = await axios.post(`${baseUrl}/contact`, data);
       console.log('Data posted successfully:', response.data);
       setIsSuccess(`Thank ${name} for reaching out, I will get back to you as soon as possible`);
       reset();

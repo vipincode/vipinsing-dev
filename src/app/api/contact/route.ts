@@ -27,7 +27,7 @@ export async function POST(request: Request) {
           `,
   };
 
-  // Send emailss
+  // Send emails
   try {
     // console.log('break after this');
     await transporter.sendMail(mailOptions);
